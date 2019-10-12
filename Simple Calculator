@@ -1,0 +1,262 @@
+import keyboard
+
+# Simple Calculator - Robust for keyboard inputs (ValueErrors)
+print("What Operation Would you like to do?")
+print("1 Add")
+print("2 Subtract")
+print("3 Multiply")
+print("4 Divide")
+try:
+    num = input("")
+    number = int(num)
+except ValueError:
+    number = 404
+    while number != 1 and number != 2 and number != 3 and number != 4:
+        try:
+            print("What Operation Would you like to do?")
+            print("1 Add")
+            print("2 Subtract")
+            print("3 Multiply")
+            print("4 Divide")
+            num = input("")
+            number = int(num)
+        except ValueError:
+            number = 404
+
+if number == 1:
+    try:
+        print("Enter two numbers to add")
+        num1 = input("")
+        number1 = int(num1)
+    except ValueError:
+        try:
+            number1 = "a"
+
+            while not number1.isdigit():
+                print("Enter two numbers to add")
+                try:
+                    num1 = input("")
+                    number1 = int(num1)
+                    break
+                except ValueError:
+                    number1 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    try:
+        print("Enter second number please: ")
+        num2 = input("")
+        number2 = int(num2)
+    except ValueError:
+        try:
+            number2 = "a"
+            while not number2.isdigit():
+                print("Enter second number please: ")
+                try:
+                    num2 = input("")
+                    number2 = int(num2)
+                    break
+                except ValueError:
+                    number2 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    number3 = float(number1 + number2)
+    print(number1, " + ", number2, " = ", number3)
+if number == 2:
+    try:
+        print("Enter two numbers to subtract")
+        num1 = input("")
+        number1 = int(num1)
+    except ValueError:
+        try:
+            number1 = "a"
+            while not number1.isdigit():
+                print("Enter two numbers to subtract")
+                try:
+                    num1 = input("")
+                    number1 = int(num1)
+                    break
+                except ValueError:
+                    number1 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    try:
+        print("Enter second number please: ")
+        num2 = input("")
+        number2 = int(num2)
+    except ValueError:
+        try:
+            number2 = "a"
+            while not number2.isdigit():
+                print("Enter second number please: ")
+                try:
+                    num2 = input("")
+                    number2 = int(num2)
+                    break
+                except ValueError:
+                    number2 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    number3 = float(number1 - number2)
+    print(number1, " - ", number2, " = ", number3)
+if number == 3:
+    try:
+        print("Enter two numbers to multiply")
+        num1 = input("")
+        number1 = int(num1)
+    except ValueError:
+        try:
+            number1 = "a"
+            while not number1.isdigit():
+                print("Enter two numbers to multiply")
+                try:
+                    num1 = input("")
+                    number1 = int(num1)
+                    break
+                except ValueError:
+                    number1 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    try:
+        print("Enter second number please: ")
+        num2 = input("")
+        number2 = int(num2)
+    except ValueError:
+        try:
+            number2 = "a"
+            while not number2.isdigit():
+                print("Enter second number please: ")
+                try:
+                    num2 = input("")
+                    number2 = int(num2)
+                    break
+                except ValueError:
+                    number2 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    number3 = float(number1 * number2)
+    print(number1, " x ", number2, " = ", number3)
+if number == 4:
+    try:
+        print("Enter two numbers to divide")
+        num1 = input("")
+        number1 = int(num1)
+    except ValueError:
+        try:
+            number1 = "a"
+            while not number1.isdigit():
+                print("Enter two numbers to divide")
+                try:
+                    num1 = input("")
+                    number1 = int(num1)
+                    break
+                except ValueError:
+                    number1 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    try:
+        print("Enter second number please: ")
+        num2 = input("")
+        number2 = int(num2)
+    except ValueError:
+        try:
+            number2 = "a"
+            while not number2.isdigit():
+                print("Enter second number please: ")
+                try:
+                    num2 = input("")
+                    number2 = int(num2)
+                    break
+                except ValueError:
+                    number2 = "a"
+        except ValueError:
+            print("I thought this was robust. Invalid Input.")
+
+    number3 = float(number1 / number2)
+    print(number1, " / ", number2, " = ", number3)
+if number != 1 and number != 2 and number != 3 and number != 4:
+    print("Not an option!")
+    quit()
+
+try:
+    print("Keep going! Enter anything besides 2 to continue!")
+    num = input("")
+    number = int(num)
+except ValueError:
+    number = 404
+# Shortened Robust for value errors
+while number != 2:
+    more = input("`+` to add"
+                 "`-` to subtract"
+                 "`*` to multiply"
+                 "`/` to divide")
+    if more == '+':
+        print(number3)
+        try:
+            addThis = float(input(" + "))
+        except ValueError:
+            addThis = "a"
+            while not addThis.isdigit():
+                try:
+                    addThis = float(input(" + "))
+                    break
+                except ValueError:
+                    addThis = "a"
+
+        number3 = number3 + addThis
+        print("= ", number3)
+    if more == '-':
+        print(number3)
+        try:
+            subtractThis = float(input(" - "))
+        except ValueError:
+            subtractThis = "a"
+            while not subtractThis.isdigit():
+                try:
+                    subtractThis = float(input(" - "))
+                    break
+                except ValueError:
+                    subtractThis = "a"
+        number3 = number3 - subtractThis
+        print("= ", number3)
+    if more == '*':
+        print(number3)
+        try:
+            multiplyThis = float(input(" * "))
+        except ValueError:
+            multiplyThis = "a"
+            while not multiplyThis.isdigit():
+                try:
+                    multiplyThis = float(input(" * "))
+                    break
+                except ValueError:
+                    multiplyThis = "a"
+        number3 = number3 * multiplyThis
+        print("= ", number3)
+    if more == '/':
+        print(number3)
+        try:
+            divideThis = float(input(" / "))
+        except ValueError:
+            divideThis = "a"
+            while not divideThis.isdigit():
+                try:
+                    divideThis = float(input(" / "))
+                    break
+                except ValueError:
+                    divideThis = "a"
+        number3 = number3 / divideThis
+        print("= ", number3)
+    try:
+        num = input("Keep going! Enter anything besides 2 to continue!")
+        number = int(num)
+    except ValueError:
+        number = 1
+    if number == 2:
+        print("Operation Complete")
