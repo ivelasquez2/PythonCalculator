@@ -25,7 +25,7 @@ except ValueError:
 
 if number == 1:
     try:
-        print("Enter two numbers to add")
+        print("Enter First number to add")
         num1 = input("")
         number1 = int(num1)
     except ValueError:
@@ -33,7 +33,7 @@ if number == 1:
             number1 = "a"
 
             while not number1.isdigit():
-                print("Enter two numbers to add")
+                print("Enter first number to add")
                 try:
                     num1 = input("")
                     number1 = int(num1)
@@ -65,14 +65,14 @@ if number == 1:
     print(number1, " + ", number2, " = ", number3)
 if number == 2:
     try:
-        print("Enter two numbers to subtract")
+        print("Enter first number to subtract")
         num1 = input("")
         number1 = int(num1)
     except ValueError:
         try:
             number1 = "a"
             while not number1.isdigit():
-                print("Enter two numbers to subtract")
+                print("Enter first number to subtract")
                 try:
                     num1 = input("")
                     number1 = int(num1)
@@ -104,14 +104,14 @@ if number == 2:
     print(number1, " - ", number2, " = ", number3)
 if number == 3:
     try:
-        print("Enter two numbers to multiply")
+        print("Enter first number to multiply")
         num1 = input("")
         number1 = int(num1)
     except ValueError:
         try:
             number1 = "a"
             while not number1.isdigit():
-                print("Enter two numbers to multiply")
+                print("Enter first number to multiply")
                 try:
                     num1 = input("")
                     number1 = int(num1)
@@ -143,14 +143,14 @@ if number == 3:
     print(number1, " x ", number2, " = ", number3)
 if number == 4:
     try:
-        print("Enter two numbers to divide")
+        print("Enter first number to divide")
         num1 = input("")
         number1 = int(num1)
     except ValueError:
         try:
             number1 = "a"
             while not number1.isdigit():
-                print("Enter two numbers to divide")
+                print("Enter first number to divide")
                 try:
                     num1 = input("")
                     number1 = int(num1)
